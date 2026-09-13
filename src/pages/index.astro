@@ -12,17 +12,29 @@ import avatar from '../assets/tunguyen_avatar.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = ['Golang', 'Ruby', 'JavaScript', 'TypeScript', 'Dart']
+const frontend = ['Flutter', 'React', 'Next.js']
+const backend = ['Golang', 'Ruby on Rails', 'Node.js', 'gRPC', 'RESTful APIs', 'WebSocket', 'Kafka']
+const databases = ['MySQL', 'PostgreSQL', 'MongoDB', 'Elasticsearch', 'Redis']
+const others = [
+	'AWS',
+	'GCP',
+	'Docker',
+	'Kubernetes',
+	'Terraform',
+	'AWS Lambda',
+	'Kong Gateway',
+	'Casbin (RBAC)',
+	'OAuth 2',
+	'CI/CD',
+]
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
+<PageLayout meta={{ title: 'Tu Nguyen' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center'>
 			<div class='group relative flex w-full flex-col items-center'>
@@ -75,19 +87,35 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 						>
 					</Label>
 					<Label
-						title='Connect on Linkedin'
+						title='nguyenvantu28011998@gmail.com'
 						as='a'
-						href='https://www.linkedin.com/in/example/'
-						target='_blank'
+						href='mailto:nguyenvantu28011998@gmail.com'
 					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
-							viewBox='0 0 16 16'
+							viewBox='0 0 24 24'
 							slot='icon'
 							class='h-5 w-5 text-foreground/75'
 							><path
 								fill='currentColor'
-								d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'
+								d='M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.15L4 8v10h16V8zm0-1L19.9 7H4.075zM4 8V7v11z'
+							></path></svg
+						>
+					</Label>
+					<Label
+						title='View on GitHub'
+						as='a'
+						href='https://github.com/vantu2801se'
+						target='_blank'
+					>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							viewBox='0 0 24 24'
+							slot='icon'
+							class='h-5 w-5 text-foreground/75'
+							><path
+								fill='currentColor'
+								d='M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.94c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.84-2.34 4.68-4.57 4.93c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2'
 							></path></svg
 						>
 					</Label>
@@ -96,66 +124,95 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</section>
 
 		<Section title='About'>
-			<p class='text-muted-foreground'>
-				I'm a self-motivated Web backend developer with the business focus, the learning mindset,
-				always ready for new challenges and 5+ years of experience in the system design and develop
-				backend microservice system by Golang. Also researched and participated in building
-				infrastructure in the software development process.
-			</p>
+			<div class='flex flex-col gap-y-4 text-muted-foreground'>
+				<p>
+					I have always believed that building software is not simply about writing code, but about
+					understanding the system as a whole, identifying what truly matters, and taking ownership
+					of complex problems when they arise.
+				</p>
+				<p>
+					Throughout my 5+ years of experience in software development, I have worked across a wide
+					range of areas—from building cloud infrastructure and deploying mobile applications to
+					developing web platforms for businesses that require stability, scalability, and high
+					availability. I have always been comfortable stepping into complex situations,
+					understanding the underlying systems, prioritizing what matters most, and focusing on
+					delivering products within the right timeframe.
+				</p>
+				<p>
+					As modern AI tools continue to evolve rapidly, many low-level tasks—such as writing code
+					and dealing with programming language syntax—will increasingly be handled by AI. This
+					allows engineers to spend more of their time working at a higher level, solving more
+					meaningful problems and creating greater value.
+				</p>
+				<p>
+					However, I do not believe this means we should simply hand everything over to AI.
+					Regardless of how software is built, an engineer is ultimately responsible for making
+					sure that the software works correctly, reliably, and as intended. That, to me, is the
+					minimum standard of engineering.
+				</p>
+				<p>
+					This portfolio is not only a showcase of my work and experience, but also a place where I
+					share the knowledge, lessons, and perspectives I have gained throughout my journey in
+					software development.
+				</p>
+			</div>
 		</Section>
 
 		<Section title='Experience'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
+				heading='IDO E-commerce Services'
+				subheading='Golang Backend Senior — CRM System'
+				date='May 2025 - Present'
 				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='IDO E-commerce Services'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
+					<li>Built chat modules with WhatsApp integration via WebSocket.</li>
+					<li>Redesigned user authorization using RBAC (Casbin) and integrated Kong Gateway.</li>
+					<li>Delivered full-stack work on a home spa booking application.</li>
+					<li>Implemented RFM reporting and OAuth 2 authentication flows.</li>
 				</ul>
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
+				heading='DAC Data Technology Vietnam JSC'
+				subheading='Golang Backend Developer — Marketing Message Distribute System'
+				date='Jan 2022 - Apr 2025'
 				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='DAC Data Technology Vietnam'
 				imageClass='h-12 w-auto md:-left-16'
-			/>
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>Designed and developed microservices for high-throughput message distribution.</li>
+					<li>Built multi-cloud communication across AWS and GCP.</li>
+					<li>Optimized batch jobs and authored system design documentation.</li>
+					<li>Provisioned infrastructure with Terraform and set up CI/CD pipelines.</li>
+					<li>Deployed and operated services on Kubernetes.</li>
+				</ul>
+			</Card>
+			<Card
+				heading='UCTalent Labs'
+				subheading='Golang Backend Developer (Part-time) — Recruitment System'
+				date='Jun 2023 - Jan 2024'
+				imagePath='/src/assets/about-astro.png'
+				altText='UCTalent Labs'
+				imageClass='h-12 w-auto md:-left-16'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>Implemented the referral code feature end-to-end.</li>
+					<li>Deployed serverless workloads with AWS Lambda.</li>
+					<li>Contributed to Ruby on Rails backend development.</li>
+				</ul>
+			</Card>
 		</Section>
 
 		<Section title='Education'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
+				heading='Danang University of Science and Technology'
+				subheading='Information Technology'
+				date='Graduated Apr 2022'
 				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
-				</ul>
-			</Card>
-			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='Danang University of Science and Technology'
 				imageClass='h-12 w-auto md:-left-16'
 			/>
 		</Section>
@@ -163,19 +220,37 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		<Section title='Projects'>
 			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
 				<ProjectCard
-					href='https://www.google.com'
-					heading='Consectetur'
-					subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+					as='div'
+					heading='CRM System'
+					subheading='Chat modules with WhatsApp integration via WebSocket, RBAC authorization with Casbin, and Kong Gateway integration.'
 					imagePath='/src/assets/coming-soon.png'
-					altText='Example'
+					altText='CRM System'
 					class='w-full sm:w-1/2'
 				/>
 				<ProjectCard
 					as='div'
-					heading='Coming soon...'
-					subheading=''
+					heading='Marketing Message Distribute System'
+					subheading='Microservice architecture running across AWS and GCP, batch job optimization, Terraform-provisioned infrastructure, and Kubernetes deployment.'
 					imagePath='/src/assets/coming-soon.png'
-					altText='Lorem, ipsum dolor sit'
+					altText='Marketing Message Distribute System'
+					class='w-full sm:w-1/2'
+				/>
+			</div>
+			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
+				<ProjectCard
+					as='div'
+					heading='Home Spa Booking App'
+					subheading='Full-stack home spa booking application built with Golang backend and Flutter mobile client.'
+					imagePath='/src/assets/coming-soon.png'
+					altText='Home Spa Booking App'
+					class='w-full sm:w-1/2'
+				/>
+				<ProjectCard
+					as='div'
+					heading='Recruitment System (UPP)'
+					subheading='Referral code feature implementation, serverless workloads on AWS Lambda, and Ruby on Rails backend contributions.'
+					imagePath='/src/assets/coming-soon.png'
+					altText='Recruitment System'
 					class='w-full sm:w-1/2'
 				/>
 			</div>
@@ -183,32 +258,29 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='Certifications'>
 			<Card
-				as='a'
-				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-				date='Mar 2024 - Mar 2024'
+				heading='Professional Scrum Master I (PSM I)'
+				subheading='Scrum.org — foundational Scrum framework and Scrum Master accountabilities.'
+				date='2022'
 				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='PSM I certification'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
 			/>
 			<Card
-				as='a'
-				heading='Lorem ipsum, dolor sit amet'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
-				date='Mar 2029 - Mar 2032'
+				heading='JLPT N3'
+				subheading='Japanese-Language Proficiency Test — intermediate level.'
+				date='2023'
 				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='JLPT N3 certification'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
 			/>
 		</Section>
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillLayout title='Frontend' skills={frontend} />
+			<SkillLayout title='Databases' skills={databases} />
+			<SkillLayout title='Cloud / DevOps / Others' skills={others} />
 		</Section>
 
 		{
